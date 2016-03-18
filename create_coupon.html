@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://ec2-52-31-177-160.eu-west-1.compute.amazonaws.com/" />
+<title>create_coupon</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">create_coupon</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/open-eshop-2.0.1/oc-panel/Coupon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='content']/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=label.control-label</td>
+	<td>Coupon Name</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=name</td>
+	<td>PVQ867</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=discount_amount</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=valid_date</td>
+	<td>2016-03-18</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=number_coupons</td>
+	<td>13</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.page-header &gt; h1</td>
+	<td>Coupon</td>
+</tr>
+<tr>
+	<td>assertTable</td>
+	<td>//div[@class=&quot;table-responsive&quot;]/table.1.0</td>
+	<td>PVQ867</td>
+</tr>
+<tr>
+	<td>assertTable</td>
+	<td>//div[@class=&quot;table-responsive&quot;]/table.1.2</td>
+	<td>15.00</td>
+</tr>
+<tr>
+	<td>assertTable</td>
+	<td>//div[@class=&quot;table-responsive&quot;]/table.1.3</td>
+	<td>13</td>
+</tr>
+<tr>
+	<td>assertTable</td>
+	<td>css=div.table-responsive &gt; table.1.4</td>
+	<td>18-03-16</td>
+</tr>
+</tbody></table>
+</body>
+</html>
